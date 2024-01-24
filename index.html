@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div id="wrapper">
+        <div id="container">
+            <div id="main-heading"><h1>Password generator</h1></div>
+            <div id="box-1">
+                <input readonly id="generated-output" value="PASSWORD" ></input>
+                              
+                <img id="copy-button" src="copy.svg" width="23" height="23">
+
+                <span id="copied-text"></span>
+               
+            </div>
+
+            <div id="box-3">
+                <div id="password-length-field">
+                    <span id="password-length">Password Length</span>
+                    <span id="length">8</span>
+                </div>
+                <input type="range" min="5" max="30" name="requiredPasswordLen" value="8" id="slider">
+
+                <div id="box-4">
+                    <div class="tickbox"> 
+                        <input type="checkbox" name="uppercase" id="uppercase" checked>
+                        <label for="uppercase">Include Uppercase Letters</label>
+                    </div>
+
+                    <div class="tickbox"> 
+                        <input type="checkbox" name="lowercase" id="lowercase">
+                        <label for="lowercase">Include Lowercase Letters</label>
+                    </div>
+
+                    <div class="tickbox"> 
+                        <input type="checkbox" name="number" id="number">
+                        <label for="number">Include Numbers</label>
+                    </div>
+
+                    <div class="tickbox"> 
+                        <input type="checkbox" name="symbol" id="symbol">
+                        <label for="symbol">Include Symbols</label>
+                    </div>
+                </div>
+               
+                <div id="box-5">
+                    <div id="strength">Strength</div>
+                    <div id="strength-indicator"></div>
+                </div>
+
+                <button id="generatePasswordButton">Generate Password</button>
+               
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
